@@ -1,11 +1,12 @@
 // app/page.tsx
-import Image from "next/image";
-import { ThemeSwitcher } from "./components/ThemeSwitcher";
+
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div>
-      hey
+    <div className="h-[2000px]">
+      <Hero />
+    
     </div>
   );
 }
