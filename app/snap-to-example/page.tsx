@@ -6,14 +6,14 @@ const page = () => {
       {/* First Section - Blue */}
       <section className="lg:hidden h-screen snap-start bg-blue-500 flex items-center justify-center">
         <div className="text-white text-4xl font-bold">
-          Section 1
+          Your Section 1 Content
         </div>
       </section>
 
       {/* Second Section - Purple */}
       <section className="lg:hidden h-screen snap-start bg-purple-500 flex items-center justify-center">
         <div className="text-white text-4xl font-bold">
-          Section 2
+            Your Section 2 Content
         </div>
       </section>
 
@@ -21,13 +21,13 @@ const page = () => {
       <div className="hidden lg:flex lg:h-screen snap-start">
         <section className="h-full w-1/2 bg-blue-500 flex items-center justify-center">
           <div className="text-white text-4xl font-bold">
-            Section 1
+            Your Section 1 Content
           </div>
         </section>
 
         <section className="h-full w-1/2 bg-purple-500 flex items-center justify-center">
           <div className="text-white text-4xl font-bold">
-            Section 2
+            Your Section 2 Content
           </div>
         </section>
       </div>
@@ -35,7 +35,7 @@ const page = () => {
       {/* Third Section - Green */}
       <section className="h-screen snap-start bg-green-500 flex items-center justify-center">
         <div className="text-white text-4xl font-bold">
-          Section 3
+            Your Section 3 Content
         </div>
       </section>
     </main>
