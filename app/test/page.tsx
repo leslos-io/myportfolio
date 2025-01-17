@@ -3,17 +3,29 @@
 const page = () => {
   return (
     <main className="h-screen snap-y snap-mandatory overflow-y-scroll">
-      {/* Container for sections 1 and 2 */}
-      <div className="lg:flex lg:h-screen snap-start">
-        {/* First Section - Blue */}
-        <section className="h-screen lg:h-full lg:w-1/2 snap-start lg:snap-align-none bg-blue-500 flex items-center justify-center">
+      {/* First Section - Blue */}
+      <section className="lg:hidden h-screen snap-start bg-blue-500 flex items-center justify-center">
+        <div className="text-white text-4xl font-bold">
+          Section 1
+        </div>
+      </section>
+
+      {/* Second Section - Purple */}
+      <section className="lg:hidden h-screen snap-start bg-purple-500 flex items-center justify-center">
+        <div className="text-white text-4xl font-bold">
+          Section 2
+        </div>
+      </section>
+
+      {/* Desktop layout for sections 1 and 2 */}
+      <div className="hidden lg:flex lg:h-screen snap-start">
+        <section className="h-full w-1/2 bg-blue-500 flex items-center justify-center">
           <div className="text-white text-4xl font-bold">
             Section 1
           </div>
         </section>
 
-        {/* Second Section - Purple */}
-        <section className="h-screen lg:h-full lg:w-1/2 snap-start lg:snap-align-none bg-purple-500 flex items-center justify-center">
+        <section className="h-full w-1/2 bg-purple-500 flex items-center justify-center">
           <div className="text-white text-4xl font-bold">
             Section 2
           </div>
