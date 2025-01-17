@@ -50,7 +50,7 @@ const Hero = () => {
     },
     {
       id: 4,
-      name: "Luxea Asset Global",
+      name: "Luxe Asset Global",
       designation: "Precious metals investment website",
       image:
         "https://luxeassetglobal.com/wp-content/uploads/2020/06/Rectangle-1-1-770x303.png",
@@ -72,73 +72,68 @@ const Hero = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-stone-950 via-zinc-900 to-zinc-950 min-h-screen lg:min-h-fit pt-6 lg:pt-8 lg:pb-14">
-      <div className="mx-auto max-w-7xl lg:px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-        <div className="mx-auto max-w-md px-6 h-[90vh] lg:h-auto flex flex-col justify-center sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left z-10">
-        <div className="lg:py-24">
-              <div className="mb-2 sm:mb-5  sm:justify-center lg:justify-start">
-                <a
-                  href="#"
-                  className="inline-flex space-x-6 bg-black/60 rounded-full py-1 pr-2"
-                >
-                  <span className="rounded-full bg-yellow-500/10 px-3 ml-1 text-sm/6 font-semibold text-yellow-500 ring-1 ring-yellow-100/10 ring-inset">
-                    Limited{" "}<span className="hidden md:inline-flex">Time&nbsp;</span>Offer
+    <div className="h-screen lg:h-auto overflow-y-auto snap-y snap-mandatory scroll-smooth lg:overflow-visible">
+      {/* Main container with snapping enabled for <lg screens */}
+      <div className="bg-gradient-to-r from-stone-950 via-zinc-900 to-zinc-950">
+        <div className="mx-auto max-w-7xl lg:px-8 overflow-hidden sm:overflow-visible">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+            {/* Hero Section - First snap point */}
+            <div className="snap-start lg:snap-none h-screen lg:h-auto mx-auto max-w-md px-6 flex flex-col justify-center sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left z-10">
+              <div className="lg:py-24">
+                <div className="mb-2 sm:mb-5 sm:justify-center lg:justify-start">
+                  <a href="#" className="inline-flex space-x-6 bg-black/60 rounded-full py-1 pr-2">
+                    <span className="rounded-full bg-yellow-500/10 px-3 ml-1 text-sm/6 font-semibold text-yellow-500 ring-1 ring-yellow-100/10 ring-inset">
+                      <span className="hidden md:inline-flex">Limited Time&nbsp;</span>Offer
+                    </span>
+                    <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
+                      <span>FREE 1st month hosting</span>
+                      <ChevronRightIcon className="size-5 text-gray-400" aria-hidden="true" />
+                    </span>
+                  </a>
+                </div>
+                <h1 className="text-6xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
+                  <span className="block">
+                    Transform Your
+                    <span className="text-yellow-400"> Local Business </span>
+                    with a
+                    <span className="text-yellow-400"> Stunning Website </span>
                   </span>
-                  <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
-                    <span>FREE 1st month hosting</span>
-                    <ChevronRightIcon
-                      className="size-5 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </a>
-              </div>
-              <h1 className="text-6xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
-                <span className="block">
-                  Transform Your
-                  <span className="text-yellow-400"> Local Business </span>
-                  with a
-                  <span className="text-yellow-400"> Stunning Website </span>
-                </span>
-              </h1>
-              <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Stand out from the competition with a professional website that
-                converts visitors into clients.
-              </p>
-              <div>
+                </h1>
+                <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  Stand out from the competition with a professional website that
+                  converts visitors into clients.
+                </p>
                 <div className="mt-6 sm:mt-8">
                   <Link
                     href="#_"
                     className="inline-block rounded-full px-6 py-2 bg-yellow-400 text-black text-lg font-medium 
-          hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-300 
-          hover:ring-2 hover:ring-offset-2 hover:ring-offset-black hover:ring-yellow-300 
-          transition-all ease-out duration-300"
+                    hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-300 
+                    hover:ring-2 hover:ring-offset-2 hover:ring-offset-black hover:ring-yellow-300 
+                    transition-all ease-out duration-300"
                   >
                     <span className="relative">Get Started Today</span>
                   </Link>
                 </div>
               </div>
             </div>
-          </div>
-          {/* Video Cards Section */}
 
-          <div className="mt-56 -mb-16 sm:-mb-48 lg:relative lg:m-0">
-            <div className="relative min-h-[500px] flex items-center justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-[90%] lg:h-full">
-              {" "}
-              {/* Added lg:w-[90%] */}
-              <div className="flex gap-1 -mx-8 scale-75 lg:scale-[0.75]">
-                {" "}
-                {/* Changed scale and added origin-right */}
-                {cards.map((card, index) => (
-                  <StoryCard key={index} {...card} />
-                ))}
+            {/* Video Cards Section - Second snap point */}
+            <div className="snap-start lg:snap-none h-screen lg:h-auto flex items-center justify-center lg:relative">
+              <div className="relative min-h-[500px] flex items-center justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-full lg:h-full">
+                <div className="flex gap-1 -mx-8 scale-75 lg:scale-[0.65] xl:scale-[0.75] transform-gpu lg:-mr-20">
+                  {cards.map((card, index) => (
+                    <StoryCard key={index} {...card} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <TestimonialsPreview people={people} className="mt-20 lg:mt-32" />
+          {/* Testimonials Section */}
+          <div className="snap-start lg:snap-none">
+            <TestimonialsPreview people={people} className="mt-20 lg:mt-32" />
+          </div>
+        </div>
       </div>
     </div>
   );
