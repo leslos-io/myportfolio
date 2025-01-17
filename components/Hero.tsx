@@ -28,7 +28,7 @@ const Hero = () => {
               </span>
             </a>
           </div>
-          <h1 className="text-6xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
+          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
             <span className="block">
               Transform Your
               <span className="text-yellow-400"> Local Business </span>
