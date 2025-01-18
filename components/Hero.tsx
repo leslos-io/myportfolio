@@ -1,8 +1,30 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import StoryCard, { type StoryCardProps } from "@/components/StoryCard";
 
-const HeroContent = () => {
+const cards: StoryCardProps[] = [
+  {
+    videoUrl: "/vid1.mov",
+    title: "Start getting leads!",
+    rotation: 0,
+    translateY: "0px",
+  },
+  {
+    videoUrl: "/vid2.mov",
+    title: "From an idea to live site in no time",
+    rotation: 10,
+    translateY: "20px",
+  },
+  {
+    videoUrl: "/vid3.mov",
+    title: "Business packaging and printing solutions",
+    rotation: 25,
+    translateY: "80px",
+  },
+];
+
+const HeroLeft = () => {
   return (
     <div className="text-white text-4xl font-bold p-8">
       <div className="mb-2 sm:mb-5 sm:justify-center lg:justify-start">
@@ -49,30 +71,44 @@ const HeroContent = () => {
   );
 };
 
+const HeroRight = () => {
+  return (
+    <div className=" -mb-16 sm:-mb-48 lg:relative lg:m-0 snap-start">
+      <div className="relative min-h-[500px] flex items-center justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-[90%] lg:h-full">
+        <div className="flex gap-1 -mx-8 scale-75 lg:scale-[0.90] transform-gpu">
+          {cards.map((card, index) => (
+            <StoryCard key={index} {...card} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
     <div className="bg-gradient-to-r from-stone-950 via-zinc-900 to-zinc-950">
       <div className="container mx-auto">
         {/* Mobile Layout */}
         <section className="lg:hidden h-screen snap-start flex items-center justify-center">
-          <HeroContent />
+          <HeroLeft />
         </section>
 
-        <section className="lg:hidden h-screen snap-start flex items-center justify-center">
+        <section className="lg:hidden h-screen snap-start flex lg:items-center justify-center">
           <div className="text-white text-4xl font-bold">
-            Your Section 2 Content
+            <HeroRight />
           </div>
         </section>
 
         {/* Desktop Layout */}
         <div className="hidden lg:flex lg:h-screen snap-start">
           <section className="h-full w-1/2 flex items-center justify-end pr-24">
-            <HeroContent />
+            <HeroLeft />
           </section>
 
           <section className="h-full w-1/2 flex items-center justify-center">
             <div className="text-red-500 text-4xl font-bold">
-              Your Section 2 Content
+              <HeroRight />
             </div>
           </section>
         </div>
