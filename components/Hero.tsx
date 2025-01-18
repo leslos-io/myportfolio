@@ -112,7 +112,7 @@ const HeroRight = () => {
         </div>
       </div>
       <div>
-        <TestimonialsPreview people={people} className="mt-20 lg:mt-32" />
+        <TestimonialsPreview people={people} />
       </div>
     </div>
   );
