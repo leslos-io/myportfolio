@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import React from "react";
-import MobileMockup from '@/components/MobileMockup';
 
 const page = () => {
   return (
