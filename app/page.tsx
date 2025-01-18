@@ -1,11 +1,20 @@
-// app/page.tsx
+import Hero from "@/components/Hero";
+import React from "react";
 
-import Hero from "@/components/Hero-Original";
-
-export default function Home() {
+const page = () => {
   return (
-    <div className="h-[2000px]">
-      <Hero />    
+    <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
+      
+      <Hero />
+
+      {/* Third Section - Green */}
+      <section className="h-screen snap-start bg-green-500 flex items-center justify-center">
+        <div className="text-white text-4xl font-bold">
+          Your Section 3 Content          
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default page;
