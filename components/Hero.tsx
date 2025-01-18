@@ -90,7 +90,7 @@ const HeroLeft = () => {
                    hover:ring-2 hover:ring-offset-2 hover:ring-offset-black hover:ring-yellow-300
                    transition-all ease-out duration-300"
         >
-          <span className="relative">Get Started Today</span>
+          <span className="relative">Get Started Today!</span>
         </Link>
       </div>
     </div>
@@ -144,6 +144,6 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+}; 
 
 export default Hero;
