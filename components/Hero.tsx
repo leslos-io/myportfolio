@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import MobileMockup from "@/components/MobileMockup";
@@ -98,6 +99,23 @@ const HeroLeft = () => {
 };
 
 const HeroRight = () => {
+  const [visiblePeople, setVisiblePeople] = useState(people);
+
+  useEffect(() => {
+    const updateVisiblePeople = () => {
+      if (window.innerWidth <= 640) {
+        setVisiblePeople(people.slice(0, 4));
+      } else {
+        setVisiblePeople(people);
+      }
+    };
+
+    updateVisiblePeople();
+    window.addEventListener("resize", updateVisiblePeople);
+
+    return () => window.removeEventListener("resize", updateVisiblePeople);
+  }, []);
+
   return (
     <div className="relative bottom-20 flex flex-col justify-center items-center w-full overflow-hidden h-full">
       <div className="relative flex justify-center items-center scale-[60%] md:scale-90 lg:scale-90">
@@ -111,8 +129,8 @@ const HeroRight = () => {
           />
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-24 h-20">
-        <TestimonialsPreview people={people} />
+      <div className="absolute inset-x-0 bottom-16">
+        <TestimonialsPreview people={visiblePeople} />
       </div>
     </div>
   );
@@ -144,6 +162,6 @@ const Hero = () => {
       </div>
     </div>
   );
-}; 
+};
 
 export default Hero;
