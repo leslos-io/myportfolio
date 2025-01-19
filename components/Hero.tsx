@@ -142,16 +142,16 @@ const Hero = () => {
       <div className="container mx-auto">
         {/* Mobile Layout */}
         <div className="lg:hidden">
-          <section className="h-screen snap-start flex items-center justify-center">
+          <section className="h-screen snap-center flex items-center justify-center">
             <HeroLeft />
           </section>
-          <section className="h-screen snap-start flex items-center justify-center">
+          <section className="h-screen snap-center flex items-center justify-center">
             <HeroRight />
           </section>
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:flex lg:h-screen snap-start">
+        <div className="hidden lg:flex lg:h-screen snap-center">
           <div className="w-1/2 flex items-center justify-end">
             <HeroLeft />
           </div>
