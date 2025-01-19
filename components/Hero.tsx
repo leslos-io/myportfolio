@@ -111,7 +111,7 @@ const HeroRight = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="absolute inset-x-0 bottom-24 h-20">
         <TestimonialsPreview people={people} />
       </div>
     </div>
