@@ -123,11 +123,11 @@ const HeroRight = () => {
     <div className="relative flex flex-col justify-center items-center w-full overflow-hidden h-full">
       <div className="relative flex justify-center items-center scale-[60%] md:scale-90 lg:scale-90">
         <div className="relative z-10">
-          <MobileMockup imageUrl="/mobilebpagespeedinsights.webp" classnames="custom-class" />
+          <MobileMockup videoUrl="vid5.mov" classnames="custom-class" />
         </div>
         <div className="relative -ml-20 z-20">
           <MobileMockup
-            videoUrl="vid2.mov"
+            videoUrl="vid4.mov"
             classnames="custom-class rotate-12"
           />
         </div>
@@ -135,6 +135,21 @@ const HeroRight = () => {
     </div>
   );
 };
+
+const HeroRightMobile = () => {
+    return (
+      <div className="relative flex flex-col justify-center items-center w-full overflow-hidden h-full">
+        <div className="relative flex justify-center items-center scale-[100%]">
+          <div className="relative z-20">
+            <MobileMockup
+              videoUrl="vid4.mov"
+              classnames="custom-class"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
 
 const Hero = () => {
   return (
@@ -146,17 +161,50 @@ const Hero = () => {
             <HeroLeft />
           </section>
           <section className="h-screen snap-center flex items-center justify-center">
-            <HeroRight />
+          <HeroRightMobile />
           </section>
         </div>
 
         {/* Desktop Layout */}
         <div className="hidden lg:flex lg:h-screen snap-center">
+
+        <svg
+          aria-hidden="true"
+          className="absolute inset-0 -z-0 size-full stroke-gray-500/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" >
+          <defs>
+            <pattern
+              x="50%"
+              y={-1}
+              id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+              width={200}
+              height={200}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              strokeWidth={0}
+            />
+          </svg>
+          <rect
+            fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
+            width="100%"
+            height="100%"
+            strokeWidth={0}
+          />
+        </svg>
+
+
+
           <div className="w-1/2 flex items-center justify-end">
             <HeroLeft />
           </div>
           <div className="w-1/2 flex items-center justify-center">
             <HeroRight />
+            
           </div>
         </div>
       </div>
