@@ -97,8 +97,8 @@ const HeroLeft = () => {
         </span>
       </h1>
       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-        Stand out from the competition with a professional website that converts
-        visitors into clients.
+        Stand out from the competition <span className="hidden md:inline-flex">with a professional website that converts
+        visitors into clients.</span>
       </p>
       <div className="mt-6 sm:mt-8">
         <Link
