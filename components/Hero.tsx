@@ -51,6 +51,23 @@ const people = [
 ];
 
 const HeroLeft = () => {
+  const [visiblePeople, setVisiblePeople] = useState(people);
+
+  useEffect(() => {
+    const updateVisiblePeople = () => {
+      if (window.innerWidth <= 640) {
+        setVisiblePeople(people.slice(0, 4));
+      } else {
+        setVisiblePeople(people);
+      }
+    };
+
+    updateVisiblePeople();
+    window.addEventListener("resize", updateVisiblePeople);
+
+    return () => window.removeEventListener("resize", updateVisiblePeople);
+  }, []);
+
   // HeroLeft component remains the same
   return (
     <div className="text-white text-4xl font-bold p-8">
@@ -94,28 +111,14 @@ const HeroLeft = () => {
           <span className="relative">Get Started Today!</span>
         </Link>
       </div>
+      <div className="mt-10">
+        <TestimonialsPreview people={visiblePeople} />
+      </div>
     </div>
   );
 };
 
 const HeroRight = () => {
-  const [visiblePeople, setVisiblePeople] = useState(people);
-
-  useEffect(() => {
-    const updateVisiblePeople = () => {
-      if (window.innerWidth <= 640) {
-        setVisiblePeople(people.slice(0, 4));
-      } else {
-        setVisiblePeople(people);
-      }
-    };
-
-    updateVisiblePeople();
-    window.addEventListener("resize", updateVisiblePeople);
-
-    return () => window.removeEventListener("resize", updateVisiblePeople);
-  }, []);
-
   return (
     <div className="relative bottom-20 flex flex-col justify-center items-center w-full overflow-hidden h-full">
       <div className="relative flex justify-center items-center scale-[60%] md:scale-90 lg:scale-90">
@@ -128,9 +131,6 @@ const HeroRight = () => {
             classnames="custom-class rotate-12"
           />
         </div>
-      </div>
-      <div className="absolute inset-x-0 bottom-16">
-        <TestimonialsPreview people={visiblePeople} />
       </div>
     </div>
   );

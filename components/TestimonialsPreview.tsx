@@ -27,8 +27,8 @@ const TestimonialsPreview: React.FC<TestimonialsPreviewProps> = ({
     className,
 }) => {
   return (
-    <div className={`flex flex-col items-center space-y-2 ${className || ''}`}>     
-      <div className="flex items-center justify-center relative">
+    <div className={`flex flex-col space-y-2 ${className || ''}`}>     
+      <div className="flex">
         {/* Client avatars */}
         <div className="flex -space-x-3">
           <AnimatedTooltip items={people} />
