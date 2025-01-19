@@ -120,7 +120,7 @@ const HeroLeft = () => {
 
 const HeroRight = () => {
   return (
-    <div className="relative bottom-20 flex flex-col justify-center items-center w-full overflow-hidden h-full">
+    <div className="relative flex flex-col justify-center items-center w-full overflow-hidden h-full">
       <div className="relative flex justify-center items-center scale-[60%] md:scale-90 lg:scale-90">
         <div className="relative z-10">
           <MobileMockup videoUrl="vid1.mov" classnames="custom-class" />
