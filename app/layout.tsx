@@ -1,7 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="dark bg-black">
-        <Navigation />
+        
         {children}
       </body>
     </html>
