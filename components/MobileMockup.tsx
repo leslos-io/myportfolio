@@ -33,7 +33,7 @@ const MobileMockup: React.FC<MobileMockupProps> = ({ videoUrl, imageUrl, classna
           <Image 
             src={imageUrl} 
             alt="Mobile Mockup" 
-            className="object-cover"
+            className="object-cover w-full h-full rounded-3xl"
             fill
             sizes="(max-width: 300px) 100vw, 300px"
             priority

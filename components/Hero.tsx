@@ -76,7 +76,7 @@ const HeroLeft = () => {
           href="#"
           className="inline-flex space-x-6 bg-black/60 rounded-full py-1 pr-2"
         >
-          <span className="rounded-full bg-yellow-500/10 px-3 ml-1 text-sm/6 font-semibold text-yellow-500 ring-1 ring-yellow-100/10 ring-inset">
+          <span className="rounded-full bg-primary-500/10 px-3 ml-1 text-sm/6 font-semibold text-primary-500 ring-1 ring-primary-100/10 ring-inset">
             <span className="hidden md:inline-flex">Limited Time&nbsp;</span>
             Offer
           </span>
@@ -92,8 +92,8 @@ const HeroLeft = () => {
       <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
         <span className="block">
           Transform Your
-          <span className="text-yellow-400"> Local Business </span>
-          with a<span className="text-yellow-400"> Stunning Website </span>
+          <span className="text-primary-400"> Local Business </span>
+          with a<span className="text-primary-400"> Stunning Website </span>
         </span>
       </h1>
       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -103,9 +103,9 @@ const HeroLeft = () => {
       <div className="mt-6 sm:mt-8">
         <Link
           href="#_"
-          className="inline-block rounded-full px-6 py-2 bg-yellow-400 text-black text-lg font-medium 
-                   hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-300
-                   hover:ring-2 hover:ring-offset-2 hover:ring-offset-black hover:ring-yellow-300
+          className="inline-block rounded-full px-6 py-2 bg-primary-400 text-black text-lg font-medium 
+                   hover:bg-gradient-to-r hover:from-primary-400 hover:to-primary-300
+                   hover:ring-2 hover:ring-offset-2 hover:ring-offset-black hover:ring-primary-300
                    transition-all ease-out duration-300"
         >
           <span className="relative">Get Started Today!</span>
@@ -123,7 +123,7 @@ const HeroRight = () => {
     <div className="relative flex flex-col justify-center items-center w-full overflow-hidden h-full">
       <div className="relative flex justify-center items-center scale-[60%] md:scale-90 lg:scale-90">
         <div className="relative z-10">
-          <MobileMockup videoUrl="vid1.mov" classnames="custom-class" />
+          <MobileMockup imageUrl="/mobilebpagespeedinsights.webp" classnames="custom-class" />
         </div>
         <div className="relative -ml-20 z-20">
           <MobileMockup
