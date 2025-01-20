@@ -153,22 +153,6 @@ const HeroRightMobile = () => {
 };
 
 const Hero = () => {
-  const [bgPatternSize, setBgPatternSize] = useState(200);
-
-  useEffect(() => {
-    const updateVisiblePeople = () => {
-      if (window.innerWidth <= 640) {
-        setBgPatternSize(150);
-      } else {
-        setBgPatternSize(200);
-      }
-    };
-
-    updateVisiblePeople();
-    window.addEventListener("resize", updateVisiblePeople);
-
-    return () => window.removeEventListener("resize", updateVisiblePeople);
-  }, []);
 
   return (
     <div className="relative">
