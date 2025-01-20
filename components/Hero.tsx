@@ -174,8 +174,8 @@ const Hero = () => {
               </section>
             </motion.div>
           </AuroraBackground>
-
-          <section className="h-screen snap-center flex items-center justify-center">
+          
+          <section className="h-screen snap-center flex items-center justify-center bg-gradient-to-t from-zinc-950 via-zinc-700 to-zinc-900">
             <HeroRightMobile />
           </section>
         </div>
