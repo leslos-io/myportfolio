@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import MobileMockup from "@/components/MobileMockup";
 import TestimonialsPreview from "@/components/TestimonialsPreview";
+import { motion } from "framer-motion";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const people = [
   {
@@ -97,8 +99,10 @@ const HeroLeft = () => {
         </span>
       </h1>
       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-        Stand out from the competition <span className="hidden md:inline-flex">with a professional website that converts
-        visitors into clients.</span>
+        Stand out from the competition{" "}
+        <span className="hidden md:inline-flex">
+          with a professional website that converts visitors into clients.
+        </span>
       </p>
       <div className="mt-6 sm:mt-8">
         <Link
@@ -137,22 +141,18 @@ const HeroRight = () => {
 };
 
 const HeroRightMobile = () => {
-    return (
-      <div className="relative flex flex-col justify-center items-center w-full overflow-hidden h-full">
-        <div className="relative flex justify-center items-center scale-[100%]">
-          <div className="relative z-20">
-            <MobileMockup
-              videoUrl="vid4.mov"
-              classnames="custom-class"
-            />
-          </div>
+  return (
+    <div className="relative flex flex-col justify-center items-center w-full overflow-hidden h-full">
+      <div className="relative flex justify-center items-center scale-[100%]">
+        <div className="relative z-20">
+          <MobileMockup videoUrl="vid4.mov" classnames="custom-class" />
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 const Hero = () => {
-
   const [bgPatternSize, setBgPatternSize] = useState(200);
 
   useEffect(() => {
@@ -170,70 +170,56 @@ const Hero = () => {
     return () => window.removeEventListener("resize", updateVisiblePeople);
   }, []);
 
-
-
   return (
-    <div className="relative bg-gradient-to-tr from-stone-950/20 via-stone-700/20 to-stone-950/20">
-
-<svg
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 size-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-      >
-        <defs>
-          <pattern
-            x="50%"
-            y={-1}
-            id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc"
-            width={bgPatternSize}
-            height={bgPatternSize}
-            patternUnits="userSpaceOnUse"
-          >
-            <path d="M.5 200V.5H200" fill="none" />
-          </pattern>
-        </defs>
-        <svg x="50%" y={-1} className="overflow-visible fill-gray-800/20">
-          <path
-            d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-            strokeWidth={0}
-          />
-        </svg>
-        <rect fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" width="100%" height="100%" strokeWidth={0} />
-      </svg>
-      
-      <div
-        aria-hidden="true"
-        className="absolute top-10 left-[calc(50%-4rem)] -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:top-[calc(50%-30rem)] lg:left-48 xl:left-[calc(50%-24rem)]"
-      >
-        <div
-          style={{
-            clipPath:
-              'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
-          }}
-          className="aspect-1108/632 w-[69.25rem] bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-20"
-        />
-      </div>
-      <div className="relative container mx-auto">
+    <div className="relative">
+      <div className="relative">
         {/* Mobile Layout */}
         <div className="lg:hidden">
+          <AuroraBackground>
+            <motion.div
+              initial={{ opacity: 0.0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className=" "
+            >
+              <section className="h-screen snap-center flex items-center justify-center">
+                <HeroLeft />
+              </section>
+            </motion.div>
+          </AuroraBackground>
+
           <section className="h-screen snap-center flex items-center justify-center">
-            <HeroLeft />
-          </section>
-          <section className="h-screen snap-center flex items-center justify-center">
-          <HeroRightMobile />
+            <HeroRightMobile />
           </section>
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:flex lg:h-screen snap-center">
 
-          <div className="w-1/2 flex items-center justify-end">
-            <HeroLeft />
-          </div>
-          <div className="w-1/2 flex items-center justify-center">
-            <HeroRight />
-            
-          </div>
-        </div>
+        <AuroraBackground>
+          <motion.div
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative flex flex-col gap-4 items-center justify-center px-4" 
+          >
+            <div className="hidden lg:flex lg:h-screen snap-center container mx-auto">
+              <div className="w-1/2 flex items-center justify-end">
+                <HeroLeft />
+              </div>
+              <div className="w-1/2 flex items-center justify-center">
+                <HeroRight />
+              </div>
+            </div>
+          </motion.div>
+        </AuroraBackground>
       </div>
     </div>
   );
