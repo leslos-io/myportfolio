@@ -160,7 +160,7 @@ const Hero = () => {
     <div className="relative">
       <div className="relative">
         {/* Mobile Layout */}
-        <div className="lg:hidden ">
+        <div className="lg:hidden snap-center">
           <AuroraBackground>
             <motion.div
               initial={{ opacity: 0.0, y: 40 }}
@@ -170,7 +170,7 @@ const Hero = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="snap-center"
+              className=""
             >
               <section className="h-screen  flex items-center justify-center">
                 <HeroLeft />
