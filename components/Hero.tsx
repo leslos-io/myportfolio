@@ -6,6 +6,9 @@ import MobileMockup from "@/components/MobileMockup";
 import TestimonialsPreview from "@/components/TestimonialsPreview";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { FlipWords } from "@/components/ui/flip-words";
+
+const words = ["Better", "Stunning", "Beautiful", "Modern"];
 
 const people = [
   {
@@ -95,7 +98,7 @@ const HeroLeft = () => {
         <span className="block">
           Transform Your
           <span className="text-primary-400"> Local Business </span>
-          with a<span className="text-primary-400"> Stunning Website </span>
+          with a<span className="text-primary-400"> <FlipWords words={words} className="!text-primary-400" /><br/>Website </span>
         </span>
       </h1>
       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
