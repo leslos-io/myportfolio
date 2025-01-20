@@ -2,9 +2,12 @@ import Hero from "@/components/Hero";
 import SomeOfOurWork from "@/components/SomeOfOurWork";
 import React from "react";
 
+
 const page = () => {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
+      
+      {/* First & Second Section */}
       <Hero />
 
       {/* Third Section - Green */}
@@ -18,6 +21,7 @@ const page = () => {
           Your Section 4 Content
         </div>
       </section>
+
     </div>
   );
 };

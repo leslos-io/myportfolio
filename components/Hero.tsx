@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import MobileMockup from "@/components/MobileMockup";
 import TestimonialsPreview from "@/components/TestimonialsPreview";
-import { motion } from "framer-motion";
-import { AuroraBackground } from "@/components/ui/aurora-background";
 import { FlipWords } from "@/components/ui/flip-words";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { motion } from "framer-motion";
 
 const words = ["Better", "Stunning", "Beautiful", "Modern"];
 
@@ -177,7 +177,7 @@ const Hero = () => {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className=""
+                className="relative flex flex-col gap-4 items-center justify-center px-4"
               >
                 <section className="h-screen  flex items-center justify-center">
                   <HeroLeft />
@@ -185,34 +185,35 @@ const Hero = () => {
               </motion.div>
             </AuroraBackground>
           </div>
-          <section className="h-screen snap-center flex items-center justify-center bg-gradient-to-t from-zinc-950 via-zinc-700 to-zinc-900">
+          <section className="h-screen snap-center flex items-center justify-center bg-gradient-to-t from-zinc-900 via-zinc-700 to-zinc-900">
             <HeroRightMobile />
           </section>
         </div>
 
         {/* Desktop Layout */}
-
-        <AuroraBackground>
-          <motion.div
-            initial={{ opacity: 0.0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="relative flex flex-col gap-4 items-center justify-center px-4"
-          >
-            <div className="hidden lg:flex lg:h-screen snap-center container mx-auto">
-              <div className="w-1/2 flex items-center justify-end">
-                <HeroLeft />
+        <div className="hidden lg:block">
+          <AuroraBackground>
+            <motion.div
+              initial={{ opacity: 0.0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className=""
+            >
+              <div className="hidden lg:flex lg:h-screen snap-center container mx-auto">
+                <div className="w-1/2 flex items-center justify-end">
+                  <HeroLeft />
+                </div>
+                <div className="w-1/2 flex items-center justify-center">
+                  <HeroRight />
+                </div>
               </div>
-              <div className="w-1/2 flex items-center justify-center">
-                <HeroRight />
-              </div>
-            </div>
-          </motion.div>
-        </AuroraBackground>
+            </motion.div>
+          </AuroraBackground>
+        </div>
       </div>
     </div>
   );
