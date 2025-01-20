@@ -98,7 +98,13 @@ const HeroLeft = () => {
         <span className="block">
           Transform Your
           <span className="text-primary-400"> Local Business </span>
-          with a<span className="text-primary-400"> <FlipWords words={words} className="!text-primary-400" /><br/>Website </span>
+          with a
+          <span className="text-primary-400">
+            {" "}
+            <FlipWords words={words} className="!text-primary-400" />
+            <br />
+            Website{" "}
+          </span>
         </span>
       </h1>
       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -160,24 +166,25 @@ const Hero = () => {
     <div className="relative">
       <div className="relative">
         {/* Mobile Layout */}
-        <div className="lg:hidden snap-center">
-          <AuroraBackground>
-            <motion.div
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className=""
-            >
-              <section className="h-screen  flex items-center justify-center">
-                <HeroLeft />
-              </section>
-            </motion.div>
-          </AuroraBackground>
-          
+        <div className="lg:hidden">
+          <div className="snap-center">
+            <AuroraBackground>
+              <motion.div
+                initial={{ opacity: 0.0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+                className=""
+              >
+                <section className="h-screen  flex items-center justify-center">
+                  <HeroLeft />
+                </section>
+              </motion.div>
+            </AuroraBackground>
+          </div>
           <section className="h-screen snap-center flex items-center justify-center bg-gradient-to-t from-zinc-950 via-zinc-700 to-zinc-900">
             <HeroRightMobile />
           </section>
