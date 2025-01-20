@@ -140,7 +140,7 @@ const HeroRight = () => {
         </div>
         <div className="relative -ml-20 z-20">
           <MobileMockup
-            videoUrl="vid4.mov"
+            videoUrl="vid4.mp4"
             classnames="custom-class rotate-12"
           />
         </div>
@@ -154,7 +154,7 @@ const HeroRightMobile = () => {
     <div className="relative flex flex-col justify-center items-center w-full overflow-hidden h-full">
       <div className="relative flex justify-center items-center scale-[100%]">
         <div className="relative z-20">
-          <MobileMockup videoUrl="vid4.mov" classnames="custom-class" />
+          <MobileMockup videoUrl="vid4.mp4" classnames="custom-class" />
         </div>
       </div>
     </div>
